@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Plugin Name:       Backwards compatibility
+ * Plugin URI:        https://corepress.org/compatibility/
+ * Description:       Backwards-compatibility hooks to stay compatible with WordPress
+ * Version:           0.0.1
+ */
+
+require_once( __DIR__ . '/plugins/backwards-compat/loader.php' );
