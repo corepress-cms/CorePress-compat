@@ -2,7 +2,6 @@
 
 // Always load these
 require_once( __DIR__ . '/deprecated/functions.php' );
-require_once( __DIR__ . '/deprecated/mu.php' );
 require_once( __DIR__ . '/deprecated/actions.php' );
 require_once( __DIR__ . '/deprecated/filters.php' );
 
@@ -19,4 +18,8 @@ function backwards_compat_json() {
 // This is only called if the admin is loaded
 function backwards_compat_admin() {
     require_once( __DIR__ . '/deprecated/admin.php' );
+}
+
+if ( is_multisite() ) {
+    require_once( __DIR__ . '/deprecated/mu.php' );
 }
