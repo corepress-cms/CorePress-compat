@@ -719,3 +719,21 @@ function update_user_status( $id, $pref, $value, $deprecated = null ) {
 
 	return $value;
 }
+
+
+
+function call_legacy_signup_create_blog_meta($blog_meta_defaults) {
+
+	/**
+	 * Filters the new site meta variables.
+	 *
+	 * Use the {@see 'add_signup_meta'} filter instead.
+	 *
+	 * @since MU (3.0.0)
+	 * @deprecated 3.0.0 Use the {@see 'add_signup_meta'} filter instead.
+	 *
+	 * @param array $blog_meta_defaults An array of default blog meta variables.
+	 */
+	return apply_filters_deprecated( 'signup_create_blog_meta', array( $blog_meta_defaults ), '3.0.0', 'add_signup_meta' );
+}
+add_filter( 'add_signup_meta', 'call_legacy_signup_create_blog_meta', 0 );

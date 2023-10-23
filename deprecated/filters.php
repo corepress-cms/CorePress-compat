@@ -11,7 +11,7 @@ function call_legacy_rewrite_rules($rules) {
 		 */
 		return apply_filters_deprecated( 'rewrite_rules', array( $rules ), '1.5.0', 'mod_rewrite_rules' );
 }
-add_filter('mod_rewrite_rules', 'call_legacy_rewrite_rules');
+add_filter('mod_rewrite_rules', 'call_legacy_rewrite_rules', 0);
 
 function call_legacy_edit_tags_per_page($tags_per_page) {
 	/**
@@ -24,4 +24,4 @@ function call_legacy_edit_tags_per_page($tags_per_page) {
 	 */
 	return apply_filters_deprecated( 'tagsperpage', array( $tags_per_page ), '2.8.0', 'edit_tags_per_page' );
 }
-add_filter('edit_tags_per_page', 'call_legacy_edit_tags_per_page');
+add_filter('edit_tags_per_page', 'call_legacy_edit_tags_per_page', 0);
