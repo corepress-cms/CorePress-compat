@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Retrieves all post data for a given post.
  *
